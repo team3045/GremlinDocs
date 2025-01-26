@@ -12,3 +12,4 @@ Contents
 .. toctree::
 
    programming/index
+   cnc/index

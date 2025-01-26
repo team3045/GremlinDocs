@@ -1,0 +1,17 @@
+.wy-nav-content {
+    max-width: 90%; /* Adjust this value as needed */
+}
+
+/* Highlight "Finish" in green */
+td:contains("Finish") {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+}
+
+/* Highlight "Rough" in orange */
+td:contains("Rough") {
+    background-color: #fff3cd;
+    color: #856404;
+    font-weight: bold;
+}
