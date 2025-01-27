@@ -56,6 +56,11 @@ This required extensive knowledge of the G-code language and only rudimentary op
 Thankfully with CAM software, we no longer need to manually write all the G-code. A computer science analogy would be to think of manually coding as a low level computer language, such as assembly, 
 whereas CAM is Python or Java. 3045 uses Fusion 360, as our primary CAM software, since it's free and has a plethora of features.
 
+.. raw:: html
+
+    <div class="tooltip">Hover over me
+        <span class="tooltiptext">Tooltip text goes here</span>
+    </div>
 
 Introduction to Fusion 360 CAM 
 ------------------------------
@@ -231,4 +236,40 @@ Before we post this program, we want to add a stop in the program so we can add 
 .. image:: /_static/images/cnc_sec_1/toolpaths_15.png
     :width: 600px
     :align: center
+
+Posting the G-Code
+------------------
+
+Let’s recall the software analogy from earlier. Although high level languages allow us to easily conceptualize our software, they still need to be translated to extremely low level inputs known as machine language, which are ones and zeros. To do this, computers use something called a compiler. A Post-Processor is no different. In this case our high level language is our tool path and the low level machine language is G-code. A post processor allows us to export our tool path as a .tap file which we can then run off the CNC controller, Mach3Mill.
+
+In order to post your code, click on actions on the toolbar and post process. This page should pop up:
+
+.. image:: /_static/images/cnc_sec_1/posting_1.png
+    :width: 600px
+    :align: center
+
+You will first need to specify your post. While all modern CNCs use G-Code each controller may have nuances on how it is interpreted. Therefore we need to specify that our CNC controller is Mach3Mill. Click the file icon to the right of the Post drop down. A second pop up should appear. On the left hand side click Fusion Library. Then on the search bar at the top left side type Mach3Mill.
+
+.. image:: /_static/images/cnc_sec_1/posting_2.png
+    :width: 600px
+    :align: center
+
+Click select and save the post processor locally. You should now see this in the post drop down:
+
+.. image:: /_static/images/cnc_sec_1/posting_3.png
+    :width: 600px
+    :align: center
+
+Next I change the unit to Millimeters. The CNC controller by default is in millimeters so this will minimize confusion between the program and CNC. I’d also recommend changing your output folder to a desktop folder by clicking on the folder icon to the right of “Output Folder”. You can also uncheck “Open NC file in editor”.
+
+We can now change the post properties on the right. I leave everything as is, but change safe retracts to G53. This means the machine will go to absolute z0 at the beginning and end of the program. Rename your program to something like “CAM example v1”.
+
+Find your .tap file. Right click on the file and choose open with notepad. Use the scroll bar and drag it to get to the end of the program. Delete the following line: G53 G0 X0 Y0
+
+.. image:: /_static/images/cnc_sec_1/posting_4.png
+    :width: 600px
+    :align: center
+
+This moves the CNC all the way to absolute zero after the program which is a waste of time. You should also make other edits here such as changing the program offset. Personally I change G53 G0 Z0 to G53 G0 Z-5 at the top of the program to ensure the CNC doesn’t hit the Z axis limit switch. Remember to save any changes in the notes app, before exporting the file to the CNC.
+
 
