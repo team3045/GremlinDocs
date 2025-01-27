@@ -14,6 +14,5 @@ Welcome to the programming section! Below are the links to get started!
 
    what_is_programming
    getting_started
-   communication
    vision
    version_control

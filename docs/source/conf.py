@@ -29,11 +29,9 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
-
-html_static_path = ['source/_static']
 
 html_css_files = ['source/_static/custom.css', ]
