@@ -41,6 +41,16 @@ td:contains("Rough") {
     transition: opacity 0.3s;
 }
 
+/* Change all links to green */
+a {
+    color: green !important;
+}
+
+/* Change the hover color (optional) */
+a:hover {
+    color: darkgreen !important;
+}
+
 /* Tooltip arrow */
 .tooltip .tooltiptext::after {
     content: "";

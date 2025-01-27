@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'Team3045'
+project = 'Team 3045'
 copyright = '2024, GearGremlins'
 author = 'GearGremlins'
 
@@ -31,7 +31,26 @@ templates_path = ['_templates']
 
 html_theme = 'furo'
 
+html_title = "Team 3045 Docs"
+
+html_logo = '_static/images/2024_Gear_Gremlin_logo.png'
+html_theme_options = {
+    "sidebar_hide_name": True,
+    "light_css_variables": {
+        "color-brand-primary": "#72a300",
+        "color-brand-content": "#72a300",
+    },
+    "dark_css_variables": {
+        "color-brand-primary": "#97D700",
+        "color-brand-content": "#97D700",
+    },
+}
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
-html_css_files = ['source/_static/custom.css', ]
+# Custom CSS to change link colors
+def setup(app):
+    app.add_css_file('custom.css')
+
+html_static_path = ['_static']
+html_css_files = ['_static/custom.css', ]

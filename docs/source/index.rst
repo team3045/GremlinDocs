@@ -1,7 +1,7 @@
-Welcome to FRC Team 3045's documentation!
+FRC Team 3045's Documentation!
 ===================================
 
-This is the main page of the documentation.
+Welcome to the main page of the documentation.
 
 
 .. note::
