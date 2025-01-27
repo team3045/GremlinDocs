@@ -2,8 +2,9 @@ Programming
 ===========
 Welcome to the programming section! Below are the links to get started!
 
-- `Getting Started <programming/getting_started.html>`_
-- `What is Programming? <programming/what_is_programming.html>`_
+- `Getting Started <getting_started.html>`_
+- `What is Programming? <what_is_programming.html>`_
+- `Vision in FRC <vision.html>`_
 
 
 .. toctree::
@@ -13,3 +14,4 @@ Welcome to the programming section! Below are the links to get started!
    what_is_programming
    getting_started
    communication
+   vision
