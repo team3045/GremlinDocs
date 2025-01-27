@@ -44,6 +44,8 @@ If you are working on a feature that is not yet ready to be merged into master, 
 If there are merge conflicts when you try to merge your branch into master, you will need to resolve them before your PR can be merged.
 Let a veteran member or lead help you with this as they can be tricky to resolve, and it is important to not lose any work.
 
+Please pull from remote at the beginning of every working session, and push at the end of every working session.
+
 .. note::
     Add a section on how to resolve merge conflicts.
     
@@ -56,6 +58,7 @@ Git Cheat sheet
 Here is a handy cheat sheet for git commands :download:`Git Cheat Sheet </_static/pdfs/git-cheat-sheet.pdf>`.
 
 .. note::
-    The cheat sheet is a quick reference guide for common git commands. It includes commands for creating repositories, adding files, committing changes, branching, merging, and more. Keep it handy as you start using git for your projects.
+    The cheat sheet is a quick reference guide for common git commands. It includes commands for creating repositories, adding files, committing changes, branching, merging, and more. 
+    Keep it handy as you start using git for your projects.
 
 
