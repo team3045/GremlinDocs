@@ -13,9 +13,11 @@ Contents
 
 - `Programming <programming/index.html>`_
 - `CNC Guide <cnc/index.html>`_
+- `Electrical <electrical/index.html>`_
 
 .. toctree::
    :hidden:
 
    programming/index
    cnc/index
+   electrical/index
