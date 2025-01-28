@@ -137,5 +137,15 @@ Tuning PID controllers typically involves the following steps:
 3. **Derivative Gain (\( k_d \))**:
    - Add \( k_d \) to dampen oscillations. Too much \( k_d \) can cause the system to respond sluggishly.
 
-Fine-Tuning Tips
+Further Reading
 ~~~~~~~~~~~~~~~~
+
+Controls Theory is a very large and complex field. This document only scratches the surface of what is possible, here are some additional resources if you wish to learn more.
+
+- `Controls Engineering in FRC <https://file.tavsys.net/control/controls-engineering-in-frc.pdf>`_
+- `WPILib Controls Theory <https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/index.html>`_
+- `Everything You Need to Know about Controls Theory <https://www.youtube.com/watch?v=lBC1nEq0_nk>`_
+- `Brian Douglas Classical Control Theory <https://www.youtube.com/playlist?list=PLUMWjy5jgHK1NC52DXXrriwihVrYZKqjk>`_
+
+Enjoy!
+
