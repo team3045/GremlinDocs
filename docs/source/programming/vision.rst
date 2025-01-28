@@ -79,6 +79,73 @@ To learn more about Kalman Filters check out `this book <https://www.kalmanfilte
 
 For an example on how to use a kalman filter to fuse vision and odomtery measurements to estimate our pose, check out our 2025 codebase.
 
+Coordinate Systems
+------------------
+Coordinate systems are used in FRC programming in several places. A few of the common places are: robot movement, joystick input, :term:`pose` estimation, AprilTags, and path planning.
+
+It is important to understand the basics of the coordinate system used throughout WPILib and other common tools for programming an FRC robot, such as PathPlanner. Many teams intuitively  think of a coordinate system that is different from what is used in WPILib, and this leads to problems that need to be tracked down throughout the season. It is worthwhile to take a few minutes to understand the coordinate system, and come back here as a reference when programming. It's not very difficult to get robot movement with a joystick working without getting the coordinate system right, but it will be much more difficult to build on code using a different coordinate system to add :term:`pose estimation` with :term:`AprilTags` and path planning for autonomous.
+
+WPI convention
+^^^^^^^^^^^^^^
+In most cases, WPILib uses the NWU axes convention (North-West-Up as external reference in the world frame.) In the NWU axes convention, where the positive X axis points ahead, the positive Y axis points left, and the positive Z axis points up referenced from the floor. When viewed with each positive axis pointing toward you, counter-clockwise (CCW) is a positive value and clockwise (CW) is a negative value.
+
+.. image:: /_static/images/vision/coordinate_1.svg
+    :alt: Coordinate System 3d
+    :align: center
+
+The figure above shows the coordinate system in relation to an FRC robot. The figure below shows this same coordinate system when viewed from the top (with the Z axis pointing toward you.) This is how you can think of the robot’s coordinates in 2D.
+
+.. image:: /_static/images/vision/coordinate_2.svg
+    :alt: Coordinated System 2d
+    :align: center
+
+.. note::
+    WPIlib, and FRC in general, generally use a field-centric coordinate system, where the origin is always the corner to the right of blue driver stations.
+    Some teams opt to switch their origin based on their alliance color, however this can lead to increased complexity as Apriltag positions and other poses are given with the blue side as origin. 
+
+Rotation convention
+^^^^^^^^^^^^^^^^^^^
+In most cases in WPILib programming, 0° is aligned with the positive X axis, and 180° is aligned with the negative X axis. CCW rotation is positive, so 90° is aligned with the positive Y axis, and -90° is aligned with the negative Y axis.
+
+.. image:: /_static/images/vision/coordinate_3.svg
+    :alt: Coordinated System Rotation
+    :align: center
+
+The figure above shows the unit circle with common angles labeled in degrees (°) and radians (rad). Notice that rotation to the right is negative, and the range for the whole unit circle is -180° to 180° (-Pi radians to Pi radians).
+
+.. note::
+    The range is (-180, 180], meaning it is exclusive of -180° and inclusive of 180°.
+
+There are some places you may choose to use a different range, such as 0° to 360° or 0 to 1 rotation, but be aware that many core WPILib classes and FRC tools are built with the unit circle above.
+
+.. warning:: Some :term:`gyroscope` and :term:`IMU` models use CW positive rotation, such as the NavX IMU. Care must be taken to handle rotation properly, sensor values may need to be inverted. Read the documentation and verify that rotation is CCW positive.
+
+.. warning:: Many sensors that read rotation around an axis, such as encoders and IMU's, read continuously. This means they read more than one rotation, so when rotating past 180° they read 181°, not -179°. Some sensors have configuration settings where you can choose their wrapping behavior and range, while others need to be handled in your code. Careful attention should be paid to make sure sensor readings are consistent and your control loop handles wrapping in the same way as your sensor.
+    
+Joystick convention
+^^^^^^^^^^^^^^^^^^
+
+Joysticks, including the sticks on controllers, don’t use the same NWU coordinate system. They use the NED (North-East-Down) convention, where the positive X axis points ahead, the positive Y axis points right, and the positive Z axis points down. When viewed with each positive axis pointing toward you, counter-clockwise (CCW) is a positive value and clockwise (CW) is a negative value.
+
+.. image:: /_static/images/vision/coordinate_4.svg
+    :alt: Joystick Coordinate System
+    :align: center
+
+It’s important to note that joystick input values are rotations around an axis, not translations. In practical terms, this means:
+
+pushing forward on the joystick (toward the positive X axis) is a CW rotation around the Y axis, so you get a negative Y value.
+
+pushing to the right (toward the positive Y axis) is a CCW rotation around the X axis, so you get a positive X value.
+
+twisting the joystick CW (toward the positive Y axis) is a CCW rotation around the Z axis, so you get a positive Z value.
+
+For a few practical examples on coordinate visit `this page <https://docs.wpilib.org/en/stable/docs/software/basic-programming/coordinate-system.html>`_.
+
+WPIlib provides many useful geometry classes to help with coordinate transforms and other geometry.
+You can find more information on the `WPIlib Docs <https://docs.wpilib.org/en/stable/docs/software/advanced-controls/geometry/index.html>`_.
+
+
+
 Resources
 ---------
 - [PhotonVision Documentation](https://docs.photonvision.org/)
