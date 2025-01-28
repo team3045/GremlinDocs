@@ -6,6 +6,7 @@ Welcome to the programming section! Below are the links to get started!
 - `What is Programming? <what_is_programming.html>`_
 - `Vision in FRC <vision.html>`_
 - `Version Control <version_control.html>`_
+- `Control Theory <control_theory.html>`_
 
 
 .. toctree::
@@ -16,3 +17,4 @@ Welcome to the programming section! Below are the links to get started!
    getting_started
    vision
    version_control
+   control_theory
