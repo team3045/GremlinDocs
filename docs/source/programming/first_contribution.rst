@@ -53,13 +53,15 @@ but we're going to do it with something called GitHub CLI.
     Here's two good videos on `Whats the difference between a GUI and CLI <https://www.youtube.com/watch?v=w9u0d4C95Zs&pp=ygUNd2hhdCBpcyBhIENMSQ%3D%3D>`_ and `Why do command lines still exist <https://www.youtube.com/watch?v=Q1dwzi5DKio&pp=ygUNd2hhdCBpcyBhIENMSQ%3D%3D>`_.
 
 1. Open a terminal on your computer. On Max you can press `cmd + space` and type in terminal, on windows you can press `win + r` and type in cmd.
+
 2. Install Homebrew (brew)
-Navigate to `guide <https://www.brew.sh>`_ or just paste this snippet into your terminal
     .. code-block:: bash
 
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-**DISCLAIMER** This command may require administrator privileges on your computer
+    Navigate to `guide <https://www.brew.sh>`_ or just paste this snippet into your terminal
+    
+    **DISCLAIMER** This command may require administrator privileges on your computer
 
 3. If you are on Mac you can just write 
     .. code-block:: bash
