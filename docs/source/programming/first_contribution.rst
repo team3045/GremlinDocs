@@ -1,0 +1,66 @@
+Making Your First Contribution
+==============================
+
+Now that you've hopefully learned about version control and are feeling comfortable with git,
+if you arent go back and read through as well as watch the tutorials on `Version Control <version_control.html>`_, 
+lets walk you through making your first contribution to one of our repos!
+
+If you scroll down to the bottom of this page, you'll see there is a list of names. 
+hese are all your peers who also made their first contribution to this document.
+We're going to add your name to the list!
+
+First we're going to need you to make a github account if you dont already have one.
+
+If you already have one you can skip to the next step.
+
+Making a Github account
+------------------------
+
+1. Go to `Github's website <https://github.com/>`_
+2. Click on Sign up in the top-right corner.
+3. Enter a username, email address, and password, then click Continue.
+4. Verify your email by checking your inbox for a confirmation message from GitHub.
+5. Follow the on-screen setup instructions (you can skip optional steps).
+6. Go to `Github <https://github.com/>`_ and log in with your new account.
+7. (Optional) Set up your profile by adding a profile picture and bio.
+
+Great job! You now have a Github account!
+
+Joining the Organization
+------------------------
+
+1. On discord send a message in the #programming channel that you have made a github account and would like to join the organization.
+Make sure to @ either the programming lead or the programming mentor, or both.
+2. Wait for a response. Once added, you should receive an email invitation.
+3. Check your email for an invitation from GitHub.
+4. Click the link in the email and accept the invitation.
+5. You should now see the organization listed under Your Organizations on GitHub!
+
+Making your first contribution
+------------------------------
+
+Great, we can finally start making your first contribution! First let's begin by cloning the repository. You can do this in a variety of ways, 
+
+    .. admonition:: Quiz
+
+        With what you learned from the tutorial video how would you do this?
+
+but we're going to do it with something called GitHub CLI.
+
+.. note::
+
+    What is a CLI? A CLI is a Command Line Interface, which is a way to interact with a computer program using text commands.
+    Here's two good videos on `Whats the difference between a GUI and CLI <https://www.youtube.com/watch?v=w9u0d4C95Zs&pp=ygUNd2hhdCBpcyBhIENMSQ%3D%3D>`_ and `Why do command lines still exist <https://www.youtube.com/watch?v=Q1dwzi5DKio&pp=ygUNd2hhdCBpcyBhIENMSQ%3D%3D>`_.
+
+1. Open a terminal on your computer. On Max you can press `cmd + space` and type in terminal, on windows you can press `win + r` and type in cmd.
+2. If you are on Mac you can just written 
+    .. code-block:: bash
+
+        brew install gh
+
+    If you are on windows you can follow this `guide <https://www.techielass.com/install-github-cli-on-windows/>`_.
+3. Once you have installed the GitHub CLI you can run the following command to clone the repository. 
+
+    .. code-block:: bash
+
+        gh repo clone frc-862/programming-docs
