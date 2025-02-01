@@ -54,29 +54,30 @@ but we're going to do it with something called GitHub CLI.
 
 1. Open a terminal on your computer. On Max you can press `cmd + space` and type in terminal, on windows you can press `win + r` and type in cmd.
 2. If you are on Mac you can just written 
+
     .. code-block:: bash
 
         brew install gh
 
-    If you are on windows you can follow this `guide <https://www.techielass.com/install-github-cli-on-windows/>`_.
+If you are on windows you can follow this `guide <https://www.techielass.com/install-github-cli-on-windows/>`_.
 3. Once you have installed the GitHub CLI you can run the following command to Login
 
     .. code-block:: bash
 
         gh auth login
 
-    This will prompt you to login with your github account on a web browser. Click Enter when Github.com is highlighted
+This will prompt you to login with your github account on a web browser. Click Enter when Github.com is highlighted
 
-    .. image:: /_static/images/first_contribution/gh_auth_login.png
+    .. image:: /_static/images/first_contribution/gh_auth.png
         :alt: gh_auth_login
 
-    It will then prompt you to select your preferred protocol, HTTPS or SSH. Select HTTPS and click Enter.
+It will then prompt you to select your preferred protocol, HTTPS or SSH. Select HTTPS and click Enter.
 
-    Then It will prompt you to Authenticate Git, type "Y" and click Enter.
+Then It will prompt you to Authenticate Git, type "Y" and click Enter.
 
-    Finally, Select Login in with a web browse. This will open a new tab in your browser where you can login with your github account.
+Finally, Select Login in with a web browse. This will open a new tab in your browser where you can login with your github account.
 
-    Copy the code it gives you and then follow the onscreen instructions.
+Copy the code it gives you and then follow the onscreen instructions.
 
 4. Once you have logged in you can run the following command to clone the repository
 
@@ -84,7 +85,7 @@ but we're going to do it with something called GitHub CLI.
 
             gh repo clone team3045/GremlinDocs
     
-    This will create a new folder in your current directory (folder) called GremlinDocs and clone the repository into it.
+This will create a new folder in your current directory (folder) called GremlinDocs and clone the repository into it.
 
 5. Open VSCode and open the folder GremlinDocs.
 
@@ -101,50 +102,55 @@ but we're going to do it with something called GitHub CLI.
         :alt: add_name
 8. Now that you've made your edit, lets commit it. Open the terminal in VSCode by pressing `ctrl + ~` and run the following commands
 
-    First we want to make a new branch to make our changes on. This is so that we can keep our changes separate from the main branch.
-    Run the command below to create a new branch with your name.
+First we want to make a new branch to make our changes on. This is so that we can keep our changes separate from the main branch.
+Run the command below to create a new branch with your name.
+
     .. code-block:: bash
 
         git checkout -b add_your_name
 
-    Next lets add all of our changes to the staging area. This is where we can see what changes we have made.
-    First run the following command to see what changes you have made.
+Next lets add all of our changes to the staging area. This is where we can see what changes we have made.
+First run the following command to see what changes you have made.
+
     .. code-block:: bash
 
         git status
     
-    You should see the file you edited in red. This means that the file has been modified.
+You should see the file you edited in red. This means that the file has been modified.
 
-    Next run the following command to add the file to the staging area.
+Next run the following command to add the file to the staging area.
+
     .. code-block:: bash
 
         git add docs/source/programming/first_contribution.rst
 
-    Now that we have added the file to the staging area we can commit it. This is where we save our changes.
+Now that we have added the file to the staging area we can commit it. This is where we save our changes.
 
-    Run the following command to commit your changes.
+Run the following command to commit your changes.
+
     .. code-block:: bash
 
         git commit -m "Add your name to the list of names"
 
-    Now lets bring our changes back into the main branch. Run the following command to switch back to the main branch.
+Now lets bring our changes back into the main branch. Run the following command to switch back to the main branch.
+
     .. code-block:: bash
 
         git checkout main
 
-    Finally lets merge our changes into the main branch. Run the following command.
+Finally lets merge our changes into the main branch. Run the following command.
 
     .. code-block:: bash
 
         git merge add_your_name
 
-    Now that we have merged our changes into the main branch we can push our changes to the repository. Run the following command.
+Now that we have merged our changes into the main branch we can push our changes to the repository. Run the following command.
 
     .. code-block:: bash
 
         git push
     
-    All done! You have made your first contribution!
+All done! You have made your first contribution!
 
 Now that you've made your changes, wait a few minutes and reload this site to see your name added to the list!
 

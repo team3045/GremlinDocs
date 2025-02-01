@@ -7,6 +7,7 @@ Welcome to the programming section! Below are the links to get started!
 - `Vision in FRC <vision.html>`_
 - `Version Control <version_control.html>`_
 - `Control Theory <control_theory.html>`_
+- `First Contribution <first_contribution.html>`_
 
 
 .. toctree::
@@ -18,3 +19,4 @@ Welcome to the programming section! Below are the links to get started!
    vision
    version_control
    control_theory
+   first_contribution
