@@ -53,14 +53,21 @@ but we're going to do it with something called GitHub CLI.
     Here's two good videos on `Whats the difference between a GUI and CLI <https://www.youtube.com/watch?v=w9u0d4C95Zs&pp=ygUNd2hhdCBpcyBhIENMSQ%3D%3D>`_ and `Why do command lines still exist <https://www.youtube.com/watch?v=Q1dwzi5DKio&pp=ygUNd2hhdCBpcyBhIENMSQ%3D%3D>`_.
 
 1. Open a terminal on your computer. On Max you can press `cmd + space` and type in terminal, on windows you can press `win + r` and type in cmd.
-2. If you are on Mac you can just written 
+2. Install Homebrew (brew)
+Navigate to `guide <https://www.brew.sh>`_ or just paste this snippet into your terminal
+    .. code-block:: bash
 
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+**DISCLAIMER** This command may require administrator privileges on your computer
+
+3. If you are on Mac you can just write 
     .. code-block:: bash
 
         brew install gh
 
 If you are on windows you can follow this `guide <https://www.techielass.com/install-github-cli-on-windows/>`_.
-3. Once you have installed the GitHub CLI you can run the following command to Login
+4. Once you have installed the GitHub CLI you can run the following command to Login
 
     .. code-block:: bash
 
@@ -79,7 +86,7 @@ Finally, Select Login in with a web browse. This will open a new tab in your bro
 
 Copy the code it gives you and then follow the onscreen instructions.
 
-4. Once you have logged in you can run the following command to clone the repository
+5. Once you have logged in you can run the following command to clone the repository
 
     .. code-block:: bash
 
@@ -87,20 +94,20 @@ Copy the code it gives you and then follow the onscreen instructions.
     
 This will create a new folder in your current directory (folder) called GremlinDocs and clone the repository into it.
 
-5. Open VSCode and open the folder GremlinDocs.
+6. Open VSCode and open the folder GremlinDocs.
 
  .. image:: /_static/images/first_contribution/vs_code_open.png
         :alt: vscode_open_folder
 
-6. Open the file `docs/source/programming/first_contribution.rst` in VSCode.
+7. Open the file `docs/source/programming/first_contribution.rst` in VSCode.
 
 .. image:: /_static/images/first_contribution/open_file.png
         :alt: vscode_open_file
-7. Scroll down to the bottom of the file and you will see a list of names. Add your name to the list.
+8. Scroll down to the bottom of the file and you will see a list of names. Add your name to the list.
 
 .. image:: /_static/images/first_contribution/names.png
         :alt: add_name
-8. Now that you've made your edit, lets commit it. Open the terminal in VSCode by pressing `ctrl + ~` and run the following commands
+9. Now that you've made your edit, lets commit it. Open the terminal in VSCode by pressing `ctrl + ~` and run the following commands
 
 First we want to make a new branch to make our changes on. This is so that we can keep our changes separate from the main branch.
 Run the command below to create a new branch with your name.
@@ -161,3 +168,4 @@ Names
 - Vincent Schelstreate
 - Ivan Kirigan
 - Akash Seetheraman
+- Mihai Popescu
