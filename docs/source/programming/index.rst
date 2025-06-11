@@ -8,6 +8,7 @@ Welcome to the programming section! Below are the links to get started!
 - `Version Control <version_control.html>`_
 - `Control Theory <control_theory.html>`_
 - `First Contribution <first_contribution.html>`_
+- `Java Proficiency Test <java_prof_test.html>`_
 
 
 .. toctree::
@@ -20,3 +21,4 @@ Welcome to the programming section! Below are the links to get started!
    version_control
    control_theory
    first_contribution
+   java_prof_test
