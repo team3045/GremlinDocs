@@ -72,3 +72,11 @@ If you're feeling confident, try the following:
 
 This will give you practice with **inheritance** and **polymorphism**.
 
+Completed
+----------
+
+- Justin Hollister
+- Vincent Schelstreate
+- Ivan Kirigan
+- Akash Seetheraman
+- Mihai Popescu
