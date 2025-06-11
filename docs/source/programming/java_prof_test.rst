@@ -76,6 +76,3 @@ Completed
 ----------
 
 - Justin Hollister
-- Ivan Kirigan
-- Akash Seetheraman
-- Mihai Popescu
