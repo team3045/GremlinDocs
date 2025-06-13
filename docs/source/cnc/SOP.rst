@@ -1,4 +1,4 @@
-Standard Operatin Procedures
+Standard Operating Procedures
 ============================
 
 OMIO X8-2200L
