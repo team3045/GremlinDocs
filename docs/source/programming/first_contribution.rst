@@ -69,6 +69,7 @@ but we're going to do it with something called GitHub CLI.
         brew install gh
 
 If you are on windows you can follow this `guide <https://www.techielass.com/install-github-cli-on-windows/>`_.
+
 4. Once you have installed the GitHub CLI you can run the following command to Login
 
     .. code-block:: bash
