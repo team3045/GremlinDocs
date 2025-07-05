@@ -172,3 +172,79 @@ Names
 - Ivan Kirigan
 - Akash Seetheraman
 - Mihai Popescu
+
+Building the Docs Locally
+-------------------------
+
+Follow these steps to set up a virtual environment and build the documentation:
+
+1. Create a Virtual Environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the project root (or inside the ``docs`` folder if preferred):
+
+.. code-block:: bash
+
+   python3 -m venv venv
+   source venv/bin/activate   # On Mac/Linux
+   # OR
+   venv\Scripts\activate      # On Windows
+
+2. Install the Requirements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If a ``requirements.txt`` file is provided:
+
+.. code-block:: bash
+
+   pip install -r requirements.txt
+
+Or install Sphinx manually:
+
+.. code-block:: bash
+
+   pip install sphinx sphinx_rtd_theme
+
+3. Build the HTML Documentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Inside the ``docs`` folder:
+
+.. code-block:: bash
+
+   make html
+
+If ``make`` does not work (common on Windows):
+
+.. code-block:: bash
+
+   sphinx-build -b html . _build/html
+
+4. View the Documentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open the generated HTML files:
+
+.. code-block:: bash
+
+   cd _build/html
+
+Then open ``index.html`` in your browser:
+
+.. code-block:: bash
+
+   xdg-open index.html    # Linux
+   open index.html        # Mac
+   start index.html       # Windows
+
+Optional: Live Preview (Not Reccommended)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For automatic rebuilding when files change:
+
+.. code-block:: bash
+
+   pip install sphinx-autobuild
+   sphinx-autobuild . _build/html
+
+This will provide a local web address like ``http://127.0.0.1:8000`` for live preview.
