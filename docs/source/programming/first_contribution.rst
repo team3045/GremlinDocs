@@ -172,6 +172,7 @@ Names
 - Ivan Kirigan
 - Akash Seetheraman
 - Mihai Popescu
+- Caden Wei
 
 Building the Docs Locally
 -------------------------
